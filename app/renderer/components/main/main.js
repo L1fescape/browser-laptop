@@ -539,6 +539,7 @@ class Main extends React.Component {
     const widevinePanelDetail = currentWindow.get('widevinePanelDetail', Immutable.Map())
     const loginRequiredDetails = basicAuthState.getLoginRequiredDetail(state, activeTabId)
     const focused = isFocused(state)
+    const hideNavigatorFullscreen = Boolean(getSetting(settings.HIDE_NAVIGATOR_FULLSCREEN))
 
     const props = {}
     // used in renderer
@@ -551,6 +552,7 @@ class Main extends React.Component {
     props.showFullScreenWarning = activeFrame.get('showFullScreenWarning')
     props.isMaximized = isMaximized(state) || isFullScreen(state)
     props.captionButtonsVisible = isWindows
+    props.hideNavigator = props.isMaximized && hideNavigatorFullscreen
     props.showContextMenu = currentWindow.has('contextMenuDetail')
     props.showPopupWindow = currentWindow.has('popupWindowDetail')
     props.showSiteInfo = currentWindow.getIn(['ui', 'siteInfo', 'isVisible']) &&
@@ -625,7 +627,8 @@ class Main extends React.Component {
       <div className={
           cx({
             top: true,
-            allowDragging: this.props.shouldAllowWindowDrag
+            allowDragging: this.props.shouldAllowWindowDrag,
+            hideNavigator: this.props.hideNavigator
           })
         }
         onMouseEnter={windowActions.setMouseInTitlebar.bind(null, true)}

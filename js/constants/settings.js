@@ -80,6 +80,7 @@ const settings = {
   SEND_CRASH_REPORTS: 'advanced.send-crash-reports',
   SEND_USAGE_STATISTICS: 'advanced.send-usage-statistics',
   ADBLOCK_CUSTOM_RULES: 'adblock.customRules',
+  HIDE_NAVIGATOR_FULLSCREEN: 'advanced.hide-navigator-fullscreen',
   TOOLBAR_UI_SCALE: 'advanced.toolbar-ui-scale',
   SWIPE_NAV_DISTANCE: 'advanced.swipe-nav-distance',
   PAYMENTS_ALLOW_PROMOTIONS: 'advanced.payments-allow-promotions',

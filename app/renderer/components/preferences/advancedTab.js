@@ -123,6 +123,7 @@ class AdvancedTab extends ImmutableComponent {
         <DefaultSectionTitle data-l10n-id='urlBarOptions' />
         <SettingsList>
           <SettingCheckbox dataL10nId='disableTitleMode' prefKey={settings.DISABLE_TITLE_MODE} settings={this.props.settings} onChangeSetting={this.props.onChangeSetting} />
+          <SettingCheckbox dataL10nId='hideNavigatorFullscreen' prefKey={settings.HIDE_NAVIGATOR_FULLSCREEN} settings={this.props.settings} onChangeSetting={this.props.onChangeSetting} />
           <SettingCheckbox dataL10nId='wideURLbar' prefKey={settings.WIDE_URL_BAR} settings={this.props.settings} onChangeSetting={this.props.onChangeSetting} />
         </SettingsList>
         <DefaultSectionTitle data-l10n-id='selectedLanguage' />

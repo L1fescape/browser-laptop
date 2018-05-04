@@ -216,6 +216,7 @@ module.exports = {
     'advanced.send-crash-reports': true,
     'advanced.send-usage-statistics': false,
     'advanced.toolbar-ui-scale': 'normal',
+    'advanced.hide-navigator-fullscreen': false,
     'advanced.swipe-nav-distance': 101,
     'advanced.payments-allow-promotions': true,
     'advanced.webrtc.policy': webrtcConstants.default,
