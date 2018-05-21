@@ -48,11 +48,17 @@ html,
     position: absolute;
     left: 0;
     right: 0;
-    z-index: 2;
+    z-index: @zindexNavigationBar;
     opacity: 0;
-    padding-bottom: 2em;
+    height: 2em;
+    overflow: hidden;
     &:hover {
       opacity: 1;
+      height: auto;
+      overflow: auto;
+      animation: fadeIn;
+      animation-duration: .3s;
+      animation-timing-function: ease-out;
     }
   }
 }
